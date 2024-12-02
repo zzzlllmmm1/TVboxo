@@ -1,0 +1,27 @@
+var rule = {
+  title: '阿里土豆',
+  host: 'https://tudou.lvdoui.top',
+  url: '/index.php/vod/show/id/fyclass/page/fypage.html',
+  searchUrl: '/index.php/vod/search.html?wd=**',
+  filter_url:'{{fl.cateId}}{{fl.area}}{{fl.by or "/by/time"}}{{fl.class}}{{fl.lang}}{{fl.letter}}/page/fypage{{fl.year}}',
+  filter: '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',
+  class_name: '电影&国产剧&韩剧&美剧&动漫&综艺&纪录片&短剧',
+  class_url: '1&2&21&22&4&3&20&24',
+  play_parse: true,
+  lazy:``,
+  推荐: '.module-list;.module-items&&.module-item;a&&title;img&&data-src;.module-item-text&&Text;a&&href',
+  double: true,
+  一级: '.module-items .module-item;a&&title;img&&data-src;.module-item-text&&Text;a&&href',
+  二级: {
+    title: 'h1&&Text;.tag-link&&Text',
+    img: '.module-item-pic&&img&&data-src',
+    desc: '.video-info-items:eq(0)&&Text;.video-info-items:eq(1)&&Text;.video-info-items:eq(2)&&Text;.video-info-items:eq(3)&&Text',
+    content: '.vod_content&&Text',
+    tabs: '.module-player-tab&&.module-tab-item',
+    lists: '.module-row-one:eq(#id)&&a.module-row-text',
+    list_text:'h4&&Text',
+    list_url:'a&&data-clipboard-text',
+    list_url_prefix:'push://'
+  },
+  搜索: '.module-items&&.module-search-item;a&&title;img&&data-src;.video-serial&&Text;.video-info-footer&&a&&href',
+}
