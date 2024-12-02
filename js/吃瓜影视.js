@@ -1,0 +1,28 @@
+var rule = {
+  title: '吃瓜影视',
+  host: 'https://www.chiguafilm.com',
+  url: '/index.php/vod/show/id/fyclass/page/fypage.html',
+  searchUrl: '/index.php/vod/search/page/fypage/wd/**.html',
+  class_parse: '.top_nav li;a&&Text;a&&href;/(\\d+).html',
+  searchable: 2,
+  quickSearch: 0,
+  filterable: 0,
+  headers: {
+    'User-Agent': 'MOBILE_UA',
+  },
+  play_parse: true,
+  lazy: '',
+  limit: 6,
+  推荐: '.cbox_list;*;*;*;*;*',
+  double: true,
+  一级: 'ul.vodlist li;a&&title;a&&data-original;.pic_text&&Text;a&&href',
+  二级: {
+    title: 'h2&&Text;.data&&a:eq(1)&&Text',
+    img: '.vodlist_thumb&&data-original',
+    desc: '.data:eq(4)&&Text;.data&&a:eq(2)&&Text;.data&&a:eq(0)&&Text;.data:eq(3)&&Text;.data:eq(2)&&Text',
+    content: '.content_desc&&span&&Text',
+    tabs: ' .play_source_tab.list_scroll.clearfix a',
+    lists: '.content_playlist.clearfix:eq(#id) li',
+  },
+  搜索: '*',
+}
