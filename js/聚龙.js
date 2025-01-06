@@ -7,7 +7,7 @@ globalThis.vodlist = function (t, pg) {
             'User-Agent': 'okhttp/3.12.11',
         }
     };
-    let html = fetch('http://106.53.74.194:8767/apptov5/v1/vod/lists?type_id=' + t + '&area=&year=&order=time&type_name=&page=' + pg + '&pageSize=21', options);
+    let html = fetch('http://124.223.107.112:8894/apptov5/v1/vod/lists?type_id=' + t + '&area=&year=&order=time&type_name=&page=' + pg + '&pageSize=21', options);
     return JSON.parse(html);
 }
 
@@ -19,7 +19,7 @@ globalThis.vodids = function (ids) {
                 'User-Agent': 'okhttp/3.12.11',
             }
         };
-        let html = fetch('http://106.53.74.194:8767/apptov5/v1/vod/getVod?id=' + ids, options)
+        let html = fetch('http://124.223.107.112:8894/apptov5/v1/vod/getVod?id=' + ids, options)
         let bata = JSON.parse(html);
         let rdata = bata.data;
 
@@ -57,7 +57,7 @@ globalThis.svodlist = function (wd) {
             'User-Agent': 'okhttp/3.12.11',
         }
     };
-    let html = fetch('http://106.53.74.194:8767/apptov5/v1/search/lists?wd=' + wd + '&page=1&type=', options)
+    let html = fetch('http://124.223.107.112:8894/apptov5/v1/search/lists?wd=' + wd + '&page=1&type=', options)
     return JSON.parse(html);
 }
 
@@ -108,7 +108,7 @@ globalThis.jxx = function (id, nid) {
             'key': id
         }
     };
-    let html = fetch('http://106.53.74.194:8767/apptov5/v2/parsing/proxy', options)
+    let html = fetch('http://124.223.107.112:8894/apptov5/v2/parsing/proxy', options)
     console.log(html);
     return JSON.parse(html).data.url !==undefined ? JSON.parse(html).data.url : "解析失败";
     if ("104847347" == '104847347') {
