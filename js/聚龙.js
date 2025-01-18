@@ -27,17 +27,17 @@ globalThis.vodids = function (ids) {
         let data = {
             vod_id: ids,
             vod_name: rdata.vod_name,
-            vod_remarks: '小米' + rdata.vod_remarks,
+            vod_remarks: rdata.vod_remarks,
             vod_actor: rdata.vod_actor,
             vod_director: rdata.vod_director,
-            vod_content: '小米提醒你请勿相信任何广告——' + rdata.vod_content,
+            vod_content: rdata.vod_content,
             vod_play_from: '',
             vod_play_url: ''
         };
 
         // 遍历 vod_play_list 数组
         rdata.vod_play_list.forEach((value) => {
-            data.vod_play_from += value.player_info.show + '|小米|广告勿信$$$';
+            data.vod_play_from += value.player_info.show + '|广告勿信$$$';
 
             // 遍历 urls 数组
             value.urls.forEach((v) => {
